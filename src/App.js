@@ -2,6 +2,7 @@ import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './component/Header';
+import Footer from './component/Footer';
 import ProductDetail from './component/ProductDetail';
 import ProductList from './component/ProductList';
 import Cart from './component/Cart';
@@ -17,6 +18,7 @@ function App() {
           <Route path='/product:id' element={<ProductDetail />} />
           <Route path='/cart' element={Cart} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
