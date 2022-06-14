@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const Header = () => {
     return(
         <>
-        <div className="row bg-info bg-opacity-50">
+        <div className="row bg-primary">
             <div className="col-11">
                 <h2>E-Commerce</h2>
             </div>
