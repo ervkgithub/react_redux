@@ -68,3 +68,103 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+Redux
+Actions, Reducer, Store
+
+
+React Redux
+Provider, useSelector, useDispatch
+connect - mapStateToprops, mapDispatchToProps
+middleware - api handling
+
+
+Redux Toolkit
+store - configurestore  | store - createstore
+import { configureStore } from '@reduxjs/toolkit'
+create slices and then combine in index.js | separate reducers and then combinereducer 
+
+
+const slice1 = createSlice({
+    name: 'slice1',
+    initialStateCart = [],
+    reducers : {
+        list of functions
+    }
+})
+
+
+
+
+
+
+
+
+
+# ###########################################################
+Pages/Features List - 
+
+Module 1 - End User Module
+*HomePage - List - API 1
+*Category Product List - API 10
+*Product Details - API 2
+*Cart
+Checkout - API 3 and 7
+Orders - API 9 and 10
+Wishlist
+*Registration - API 4
+*Login - API 5
+
+
+Module 2 - Admin/Employee Module
+*Add Product - API 6
+All Orders - API 8
+
+# ###########################################################
+List of APIs
+
+1) http://localhost:4000/products - Products - Non-secure
+2) http://localhost:4000/products/:id - Products - Non-secure
+3) for order placement - Orders - Secure
+4) Registration - Users - post api for users table - Non-secure
+5) Login - Users - get api for user with specific details - Non-secure
+6) http://localhost:4000/products(POST) - Products - **Secure
+7) POST - Order Details - Order Details Table - **Secure
+8) GET - All Orders - Orders - **Secure
+9) GET - User Orders - Orders - Secure
+10) GET - Category wise Products - Non-secure
+
+# ###########################################################
+
+List of Tables
+
+Products
+Users
+--user details - address, gender, dob, profilepic
+Orders - orderid, orderdate, deliverydate, amount, mobile, pincode, address, paymentmode, paymentstatus, orderstatus
+order details - orderid, itemid, id, price, quantity
+customer_address - userid, addresstype, name, flatnum, society/town/village, city, state, pincode, mobile
+
+
+
+
+
+# ###########################################################
+
+
+Login - 
+Authentication
+Authorization - Auth0, Passport, JWT Tokens
+
+
+
+JWT - Json Web Token
+Step 1 - Back End - Create Token and send on login
+Step 2 - Front End - Receive token and save local - localStorage/Redux/Context
+Step 2.1 - Check login using jwt token on front end
+Step 3 - Front End - Send on secure api call in header
+Step 4 - Back End - Verify token on api middleware
+
